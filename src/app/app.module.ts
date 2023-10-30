@@ -8,6 +8,7 @@ import { ContentComponent } from './content/content.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DrawerComponent } from './drawer/drawer.component';
 import { InViewportModule } from 'ng-in-viewport';
+import { RESPONSEComponent } from './response/response.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { InViewportModule } from 'ng-in-viewport';
     ContentComponent,
     NavbarComponent,
     DrawerComponent,
+    RESPONSEComponent,
     
   ],
   imports: [

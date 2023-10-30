@@ -1,0 +1,18 @@
+<h1>HTTP request body</h1>
+<div class="wrapper">
+  <table id="customers">
+    <tr>
+      <th>name</th>
+      <th>type</th>
+      <th>required</th>
+      <th>description</th>
+    </tr>
+
+    <tr *ngFor="let resp of responses">
+      <td>{{ resp.name }}</td>
+      <td>{{ resp.type }}</td>
+      <td>{{ resp.required }}</td>
+      <td style="width: 100px !important">{{ resp.desc }}</td>
+    </tr>
+  </table>
+</div>
