@@ -3,7 +3,7 @@
   <div class="row wrapper">
     <app-sidebar></app-sidebar>
     <!-- <button type="button" (click)="openDrawer('opened')">open</button> -->
-    <app-content></app-content>
+    <app-content (drawerEvent)="openDrawer($event)" ></app-content>
   </div>
 </div>
 

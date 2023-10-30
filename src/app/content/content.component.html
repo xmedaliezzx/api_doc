@@ -47,9 +47,9 @@
 
   <div class="divider" style="width: 24%; margin: 30px 0"></div>
 
-  <h1></h1>
+  <h1>Débutez</h1>
 
-  <h2>Pourquoi</h2>
+  <h2>Pourquoi ?</h2>
 
   <p>
     Le wallet mobile simplifie la vie de plus de 2 milliards d’utilisateurs dans
@@ -135,7 +135,7 @@
     <b> Host</b> https://wallets.fr
     <br />
     <br id="feature3" />
-    <b>x-api-key</b> {{"{x-api-key}"}}
+    <b>x-api-key</b> {{ "{x-api-key}" }}
     <br />
     <br />
     <b>Accept</b> application/json
@@ -144,10 +144,11 @@
     <b>Content-Type</b> multipart/form-datadat
     <br />
     <br />
-    <b>Authorization</b> {{ '"abc {****************************}"'  }} (Please replace asterisks with the actual authorization token) 
+    <b>Authorization</b> {{ '"abc {****************************}"' }} (Please
+    replace asterisks with the actual authorization token)
     <br />
     <br />
-    <a class="code_btn" type="button" href="#">Code</a>
+    <a class="code_btn" type="button" (click)="openCloseDrawer()">Code</a>
   </p>
 
   <h2>Feature 3</h2>
