@@ -2,12 +2,15 @@
 <div class="container clear">
   <div class="row wrapper">
     <app-sidebar></app-sidebar>
-    <button type="button" (click)="openDrawer('opened')">open</button>
+    <!-- <button type="button" (click)="openDrawer('opened')">open</button> -->
     <app-content></app-content>
   </div>
 </div>
 
-<app-drawer [drawerState]="drawerState" (state)="openDrawer($event)"></app-drawer>
+<app-drawer
+  [drawerState]="drawerState"
+  (state)="openDrawer($event)"
+></app-drawer>
 
 <!-- <div class="test"
 inViewport
