@@ -38,7 +38,7 @@
     and maintainable server-side applications.
   </p>
 
-  <p id="gettingstarted"> 
+  <p id="gettingstarted">
     <strong>MongoDB : </strong>
     We utilize MongoDB, a NoSQL database, for storing and managing our data.
     Mention the version and any specific configurations relevant to your
@@ -47,7 +47,7 @@
 
   <div class="divider" style="width: 24%; margin: 30px 0"></div>
 
-  <h1 >Getting Started</h1>
+  <h1></h1>
 
   <h2>Pourquoi</h2>
 
@@ -63,19 +63,20 @@
     clés que vous leur délivrez.
   </p>
 
-  <p>Proposer des parcours simplifiants, digitaux, via le smartphone de vos clients n’est plus une option. Avec le wallet vous êtes dans le match !</p>
+  <p>
+    Proposer des parcours simplifiants, digitaux, via le smartphone de vos
+    clients n’est plus une option. Avec le wallet vous êtes dans le match !
+  </p>
 
   <p id="installingapp">
-    <b>Important:</b> Le wallet est présent dans 99% des smartphones de vos clients.
-
-    De ce fait, il n’est plus nécessaire d’obtenir leurs consentements, puisque déjà accordés à Apple, Google ou Samsung.
+    <b>Important:</b> Le wallet est présent dans 99% des smartphones de vos
+    clients. De ce fait, il n’est plus nécessaire d’obtenir leurs consentements,
+    puisque déjà accordés à Apple, Google ou Samsung.
   </p>
 
   <h2>Comment ça marche</h2>
 
-  <p>
-    le meilleur système de portefeuille intelligent en 2023.
-  </p>
+  <p>le meilleur système de portefeuille intelligent en 2023.</p>
 
   <ol>
     <li>Inscription.</li>
@@ -111,36 +112,42 @@
 
   <div class="divider" style="width: 24%; margin: 30px 0"></div>
 
-  <h1>Basic Features</h1>
+  <h1>Authentification du module</h1>
 
-  <h2>Feature 1</h2>
+  <h2>Description:</h2>
 
-  <p id="basicfeatures">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  <p id="description">
+    Ce module permet aux utilisateurs de se connecter à un portefeuille et
+    d'accéder à ses services.
   </p>
 
-  <h2>Feature 2</h2>
+  <h2 id="login">Login</h2>
 
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
+    <strong>HTTP Request Header : </strong>
     <br /><br />
-    <b>Explanation 1</b> Lorem ipsum dolor sit amet, consectetur adipiscing
-    elit.
+    <b>Method:</b> PUT
     <br />
     <br />
-    <b>Explanation 2</b> Lorem ipsum dolor sit amet, consectetur adipiscing
-    elit.
+    <b>URL</b> {{ "/api/wallets/{id}" }}
     <br />
     <br />
-    <b>Explanation 3</b> Lorem ipsum dolor sit amet, consectetur adipiscing
-    elit.
+    <b> Host</b> https://wallets.fr
     <br />
     <br id="feature3" />
-    <b>Explanation 4</b> Lorem ipsum dolor sit amet, consectetur adipiscing
-    elit.
+    <b>x-api-key</b> {{"{x-api-key}"}}
+    <br />
+    <br />
+    <b>Accept</b> application/json
+    <br />
+    <br />
+    <b>Content-Type</b> multipart/form-datadat
+    <br />
+    <br />
+    <b>Authorization</b> {{ '"abc {****************************}"'  }} (Please replace asterisks with the actual authorization token) 
+    <br />
+    <br />
+    <a class="code_btn" type="button" href="#">Code</a>
   </p>
 
   <h2>Feature 3</h2>
