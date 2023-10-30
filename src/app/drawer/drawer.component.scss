@@ -1,0 +1,76 @@
+.wrapper {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  span {
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    text-align: center;
+    color: rgb(112, 112, 112);
+    font-family: var(--deckgo-highlight-code-font-family, monospace);
+  }
+  p {
+    text-align: left;
+    color: rgb(255, 255, 255);
+    font-family: var(--deckgo-highlight-code-font-family, monospace);
+  }
+  hr {
+    border-width: 0px 0px 1px 0px;
+    border-color: rgb(112, 112, 112);
+    width: 100%;
+  }
+
+  .button-container {
+    text-decoration: none;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    margin: 0.5em .2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .red {
+    background-color: var(
+      --deckgo-highlight-code-carbon-header-button-red-background,
+      #ff5f56
+    );
+  }
+  .yellow {
+    background-color: var(
+      --deckgo-highlight-code-carbon-header-button-yellow-background,
+      #ffbd2e
+    );
+  }
+  .green {
+    background-color: var(--deckgo-highlight-code-carbon-header-button-green-background, #27c93f);
+  }
+}
+
+.closed {
+  right: -40%;
+  width: 0%;
+  transition: all 0.5s;
+}
+.opened {
+  right: 0%;
+  width: 40%;
+  transition: all 0.5s;
+}
+.wide {
+  right: 0%;
+  width: 97%;
+  transition: all 0.5s;
+}
+
+.scroll {
+  height: calc(100% - 150px);
+  overflow: auto;
+}
