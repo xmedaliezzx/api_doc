@@ -114,19 +114,68 @@
 
   <h1 id="authentification">Authentification du module</h1>
 
-  <h2>Description:</h2>
+  <h3>Description:</h3>
 
   <p id="description">
     Ce module permet aux utilisateurs de se connecter à un portefeuille et
     d'accéder à ses services.
   </p>
 
-  <h2 id="login">Login</h2>
+  <h3 id="login">Login</h3>
 
   <p>
     <strong>HTTP Request Header : </strong>
     <br /><br />
     <b>Method:</b> POST
+    <br />
+    <br />
+    <b>URL</b> {{ "/api/wallets/" }}
+    <br />
+    <br />
+    <b> Host</b> https://wallets.fr
+    <br />
+    <br />
+    <strong>HTTP Request Body (json):</strong>
+    <br />
+    <br />
+    <a class="code_btn" type="button" (click)="openCloseDrawer()">Code</a>
+  </p>
+  <h3>Response</h3>
+  <table>
+    <tr style="text-align: center">
+      <th>Status Code</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>200</td>
+      <td>Successful login</td>
+    </tr>
+    <tr>
+      <td>400</td>
+      <td>Please provide user name and password!</td>
+    </tr>
+    <tr>
+      <td>401</td>
+      <td>Unauthorized</td>
+    </tr>
+  </table>
+
+  <div class="divider" style="width: 24%; margin: 30px 0"></div>
+
+  <h1>Manage Wallets Module</h1>
+
+  <h3>Description:</h3>
+
+  <p>
+    Ce module permet aux utilisateurs d'établir et de superviser des
+    portefeuilles numériques au sein de l'application Eldowallet, offrant la
+    possibilité de déposer des fonds, de consulter l'historique des transactions
+    et d'accéder aux statistiques liées à diverses activités de portefeuille.
+  </p>
+  <h2>Update WALLETS:</h2>
+  <h3>HTTP Request Header :</h3>
+  <p>
+    <b>Method:</b> PUT
     <br />
     <br />
     <b>URL</b> {{ "/api/wallets/{id}" }}
@@ -150,47 +199,260 @@
     <br />
     <a class="code_btn" type="button" (click)="openCloseDrawer()">Code</a>
   </p>
-
+  <h3>HTTP request body:</h3>
   <app-response [responses]="loginResponses"></app-response>
-  <h1>Responses</h1>
+  <h3>Response</h3>
+  <table>
+    <tr style="text-align: center">
+      <th>Status Code</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>200</td>
+      <td style="padding-left: 10px">
+        <b>Status: Success </b>
+        <br />
+        <br />
+        <b>Business Details: </b>
+        <br />
+        ID: string
+        <br />
+        Name: string
+        <br />
+        Business Phone: string
+        <br />
+        Website: string
+        <br />
+        Address: string
+        <br />
+        Opening Hours: string
+        <br />
+        Identifier QR: string
+        <br />
+        Identifier: string
+        <br />
+        Gain Unit: string
+        <br />
+        <br />
+        <b>Visual Identity:</b>
+        <br />
+        Label Color: Hexadecimal: string; RGB: string
+        <br />
+        Background Color: Hexadecimal: string; RGB: string
+        <br />
+        Foreground Color: Hexadecimal: string; RGB: string
+        <br />
+        <br />
+        <b> Media Links: </b>
+        <br />
+        Facebook:string
+        <br />
+        Instagram:string
+        <br />
+        Linkedin:string
+        <br />
+        <br />
+        <b>Logo and Visuals: </b>
+        <br />
+        Logo Picture URL: string
+        <br />
+        Icon Picture URL: string
+        <br />
+        Strip Picture URL: string
+      </td>
+    </tr>
+    <tr>
+      <td>404</td>
+      <td style="padding-left: 10px">Wallet not found</td>
+    </tr>
+  </table>
+
+  <h1>Get WALLETS Informations:</h1>
+  <h3>HTTP Request Header:</h3>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
-    <br id="feature4" />
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    <b>Method:</b> GET
+    <br />
+    <br />
+    <b>URL</b> {{ "/api/wallets/{id}" }}
+    <br />
+    <br />
+    <b> Host</b> https://wallets.fr
+    <br />
+    <br id="" />
+    <b>x-api-key</b> {{ "{x-api-key}" }}
+    <br />
+    <br />
+    <b>Authorization</b> {{ '"abc {****************************}"' }} (Please
+    replace asterisks with the actual authorization token)
+    <br />
+    <br />
+    <a class="code_btn" type="button" (click)="openCloseDrawer()">Code</a>
   </p>
+  <h3>Response</h3>
+  <table>
+    <tr style="text-align: center">
+      <th>Status Code</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>200</td>
+      <td style="padding-left: 10px">
+        <b>Status: Success </b>
+        <br />
+        <br />
+        <b>Business Details: </b>
+        <br />
+        ID: string
+        <br />
+        Name: string
+        <br />
+        Business Phone: string
+        <br />
+        Service Phone: string
+        <br />
+        Website: string
+        <br />
+        Address: string
+        <br />
+        Opening Hours: string
+        <br />
+        Identifier QR: string
+        <br />
+        Identifier: string
+        <br />
+        Gain Unit: string
+        <br />
+        <br />
+        <b>Visual Identity:</b>
+        <br />
+        Label Color: Hexadecimal: string; RGB: string
+        <br />
+        Background Color: Hexadecimal: string; RGB: string
+        <br />
+        Foreground Color: Hexadecimal: string; RGB: string
+        <br />
+        <br />
+        <b> Media Links: </b>
+        <br />
+        Facebook:string
+        <br />
+        Instagram:string
+        <br />
+        Linkedin:string
+        <br />
+        <br />
+        <b>Logo and Visuals: </b>
+        <br />
+        Logo Picture URL: string
+        <br />
+        Icon Picture URL: string
+        <br />
+        Strip Picture URL: string
+      </td>
+    </tr>
+    <tr>
+      <td>404</td>
+      <td style="padding-left: 10px">Wallet not found</td>
+    </tr>
+  </table>
 
-  <h2>Feature 4</h2>
-
+  <h1>Get WALLETS Informations</h1>
+  <h3>HTTP Request Header:</h3>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
+    <b>Method:</b> GET
     <br />
     <br />
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    <b>URL</b> {{ "/api/wallets/{id}" }}
     <br />
-    <br id="feature5" />
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
+    <br />
+    <b> Host</b> https://wallets.fr
+    <br />
+    <br id="" />
+    <b>x-api-key</b> {{ "{x-api-key}" }}
+    <br />
+    <br />
+    <b>Authorization</b> {{ '"abc {****************************}"' }} (Please
+    replace asterisks with the actual authorization token)
+    <br />
+    <br />
+    <a class="code_btn" type="button" (click)="openCloseDrawer()">Code</a>
   </p>
+  <h3>Response</h3>
+  <table>
+    <tr style="text-align: center">
+      <th>Status Code</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>200</td>
+      <td style="padding-left: 10px">
+        <b>Status: Success </b>
+        <br />
+        <br />
+        <b>Business Details: </b>
+        <br />
+        ID: string
+        <br />
+        Name: string
+        <br />
+        Business Phone: string
+        <br />
+        Service Phone: string
+        <br />
+        Website: string
+        <br />
+        Address: string
+        <br />
+        Opening Hours: string
+        <br />
+        Identifier QR: string
+        <br />
+        Identifier: string
+        <br />
+        Gain Unit: string
+        <br />
+        <br />
+        <b>Visual Identity:</b>
+        <br />
+        Label Color: Hexadecimal: string; RGB: string
+        <br />
+        Background Color: Hexadecimal: string; RGB: string
+        <br />
+        Foreground Color: Hexadecimal: string; RGB: string
+        <br />
+        <br />
+        <b> Media Links: </b>
+        <br />
+        Facebook:string
+        <br />
+        Instagram:string
+        <br />
+        Linkedin:string
+        <br />
+        <br />
+        <b>Logo and Visuals: </b>
+        <br />
+        Logo Picture URL: string
+        <br />
+        Icon Picture URL: string
+        <br />
+        Strip Picture URL: string
+      </td>
+    </tr>
+    <tr>
+      <td>404</td>
+      <td style="padding-left: 10px">Wallet not found</td>
+    </tr>
+  </table>
 
-  <h2>Feature 5</h2>
+  <!-- 
 
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur.
-    <br />
-    <br />
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
-    <br />
-  </p>
 
-  <h2>Feature 5</h2>
 
+
+
+  
+ -->
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

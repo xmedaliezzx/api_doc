@@ -85,7 +85,7 @@ export class ContentComponent {
       name: 'iosHeaderFields',
       type: 'object',
       required: true,
-      desc: "Field comprises key-value pairs in a structured JSON format, enabling customization and data presentation within an iOS app's UI and network requests. For instance, in the given example: {'label':'FULLNAME','labelPersonnalizedText':'+d’infos...','value':'FULLNAME','valuePersonnalizedText':'Default text'}. ",
+      desc: "Field comprises key-value pairs in a structured JSON format, enabling customization and data presentation within an iOS app's UI and network requests. For instance, in the given example: { 'label' : 'FULLNAME' , 'labelPersonnalizedText' : '+d’infos...' , 'value' : 'FULLNAME' , 'valuePersonnalizedText' : 'Default text' }. ",
     },
     {
       name: 'additionalContacts',
@@ -165,7 +165,6 @@ export class ContentComponent {
       required: true,
       desc: '',
     },
-    
   ];
 
   openCloseDrawer(): void {
