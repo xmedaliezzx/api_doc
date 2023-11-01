@@ -14,7 +14,16 @@ import {
 })
 export class DrawerComponent {
   @Input() drawerState: string = 'closed';
+  @Input() api: string = '';
+  @Input() body: any = {};
+  @Input() method: string = '';
+
+jsons = {
+name: 'jhon',
+lastName : 'Doe' 
+}
   @Output() state: EventEmitter<string> = new EventEmitter();
+
 
   changeDrawerState(state:string):void {
     this.state.emit(state);    

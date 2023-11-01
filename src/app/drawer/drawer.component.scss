@@ -74,3 +74,22 @@
   height: calc(100% - 150px);
   overflow: auto;
 }
+
+textarea {
+  margin: 0;
+  margin-top:10px;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  appearance: none;
+}
+
+textarea {
+  width: inherit;
+  border-radius: 5px;
+  background: #ddd;
+  font-weight: 200;
+  resize: vertical;
+}
