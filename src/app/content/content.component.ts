@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { getCouponServices } from './jsondoc';
 
 @Component({
   selector: 'app-content',
@@ -121,7 +122,7 @@ export class ContentComponent {
       desc: 'Wallet not found',
     },
   ];
-  UpdateCustomersResponses=[
+  UpdateCustomersResponses = [
     {
       status: '200',
       desc: `Customer successfully updated `,
@@ -138,10 +139,70 @@ export class ContentComponent {
       status: '404',
       desc: 'Customer not found',
     },
-  ]
-
-
-
+  ];
+  GetCustomerResponses = [
+    {
+      status: '200',
+      desc: `_id: (string) 
+      gain: (Number) 
+      firstName: (string) 
+      lastName: (string) 
+      email: (string) 
+      source: (string)
+      barcode: (string) 
+      CreatedAt:(string) `,
+    },
+    {
+      status: '401',
+      desc: 'Unauthorized ',
+    },
+    {
+      status: '404',
+      desc: 'Customer not found',
+    },
+  ];
+  DeleteCustomerResponses = [
+    {
+      status: '200',
+      desc: `successfully deleted `,
+    },
+    {
+      status: '401',
+      desc: 'Unauthorized ',
+    },
+    {
+      status: '404',
+      desc: 'Customer not found',
+    },
+  ];
+  CreateOfferResponses2 = [
+    {
+      status: '200',
+      desc: 'successful created ',
+    },
+    {
+      status: '401',
+      desc: 'Unauthorized ',
+    },
+    {
+      status: '404',
+      desc: 'Wallet  not found!  ',
+    },
+  ];
+  GetOffersResponses2 = [
+    {
+      status: '200',
+      desc: 'Offers list',
+    },
+    {
+      status: '401',
+      desc: 'Unauthorized ',
+    },
+    {
+      status: '404',
+      desc: 'Wallet  not found!  ',
+    },
+  ];
 
   loginResponses = [
     {
@@ -301,6 +362,36 @@ export class ContentComponent {
       desc: '',
     },
   ];
+  CreateOfferResponses = [
+    {
+      name: 'startDate',
+      type: 'string',
+      required: true,
+      desc: 'Field with string iso formt ',
+    },
+    {
+      name: 'ENDdate',
+      type: 'string',
+      required: true,
+      desc: 'Field with string iso formt ',
+    },
+    {
+      name: 'description',
+      type: 'string',
+      required: true,
+      desc: '',
+    },
+    {
+      name: 'Strip',
+      type: 'file',
+      required: true,
+      desc: '',
+    },
+  ];
+
+  logData(): void {
+    getCouponServices();
+  }
 
   openCloseDrawer(): void {
     this.drawerEvent.emit('opened');

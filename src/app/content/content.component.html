@@ -308,6 +308,125 @@ Authenticiation Module
     [responses2]="UpdateCustomersResponses"
   ></app-response-tbl2>
 
+  <h2 id="GetCustomer">Get Customer informations</h2>
+  <h3>HTTP Request Header:</h3>
+  <p>
+    <b>Method:</b> GET
+    <br />
+    <br />
+    <b>URL</b>
+    {{ " https://wallets.fr/api/customers/{customer_id}/informations" }}
+    <br />
+    <br />
+    <b> Host</b> https://wallets.fr
+    <br />
+    <br id="" />
+    <b>x-api-key</b> {{ "{x-api-key}" }}
+    <br />
+    <br />
+    <b>Authorization</b> {{ '"abc {****************************}"' }} (Please
+    replace asterisks with the actual authorization token)
+  </p>
+  <h3>Response</h3>
+  <app-response-tbl2 [responses2]="GetCustomerResponses"></app-response-tbl2>
+
+  <h2>Delete Customer</h2>
+  <h3>HTTP Request Header:</h3>
+  <p>
+    <b>Method:</b> DELETE
+    <br />
+    <br />
+    <b>URL</b> {{ " https://wallets.fr/api/customers/{customer_id}" }}
+    <br />
+    <br />
+    <b> Host</b> https://wallets.fr
+    <br />
+    <br id="" />
+    <b>x-api-key</b> {{ "{x-api-key}" }}
+    <br />
+    <br />
+    <b>Accept</b> {{ "application/json " }}
+    <br />
+    <br />
+    <b>Content-Type:</b> {{ "multipart/form-datadat" }}
+    <br />
+    <br />
+    <b>Authorization</b> {{ '"abc {****************************}"' }} (Please
+    replace asterisks with the actual authorization token)
+  </p>
+  <h3>Response</h3>
+  <app-response-tbl2 [responses2]="DeleteCustomerResponses"></app-response-tbl2>
+
+  <div class="doublespace"></div>
+  <div class="divider" style="width: 24%; margin: 30px 0"></div>
+
+  <h1 id="ManageOffersModule">Manage Offers Module</h1>
+  <h2>Description</h2>
+  <p>
+    The "Manage Offers Module" empowers managers with the capability to create,
+    update, and oversee a wide array of promotional offers and deals within the
+    Eldowallet app. This module enables businesses to effortlessly design,
+    schedule, and track the performance of special promotions, thereby enhancing
+    the overall customer experience and bolstering user engagement with the
+    platform.
+  </p>
+  <h2 id="CreateOffer">Create Offer</h2>
+  <h3>HTTP Request Header:</h3>
+  <p>
+    <b>Method:</b> POST
+    <br />
+    <br />
+    <b>URL</b> {{ "/api/wallets/{id}/offers " }}
+    <br />
+    <br />
+    <b> Host</b> https://wallets.fr
+    <br />
+    <br id="" />
+    <b>x-api-key</b> {{ "{x-api-key}" }}
+    <br />
+    <br />
+    <b>Authorization</b> {{ '"abc {****************************}"' }} (Please
+    replace asterisks with the actual authorization token)
+  </p>
+  <h3>HTTP Request body:</h3>
+  <app-response [responses]="CreateOfferResponses"></app-response>
+  <h3>Response</h3>
+  <app-response-tbl2 [responses2]="CreateOfferResponses2"></app-response-tbl2>
+  <h2 id="GetOffers">Get Offers</h2>
+  <h3>HTTP Request Header:</h3>
+  <p>
+    <b>Method:</b> GET
+    <br />
+    <br />
+    <b>URL</b> {{ "/api/wallets/{id}/offers/{id}" }}
+    <br />
+    <br />
+    <b> Host</b> https://wallets.fr
+    <br />
+    <br id="" />
+    <b>x-api-key</b> {{ "{x-api-key}" }}
+    <br />
+    <br />
+    <b>Authorization</b> {{ '"abc {****************************}"' }} (Please
+    replace asterisks with the actual authorization token)
+  </p>
+  <h3>Response</h3>
+  <app-response-tbl2 [responses2]="GetOffersResponses2"></app-response-tbl2>
+
+  <div class="doublespace"></div>
+  <div class="divider" style="width: 24%; margin: 30px 0"></div>
+
+  <!-- 
+  
+  
+  
+  Manage Customers Module
+
+
+
+ -->
+
+  <button (click)="logData()"></button>
   <div class="doublespace"></div>
   <div class="divider" style="width: 24%; margin: 30px 0"></div>
 </div>
