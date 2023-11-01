@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { getCouponServices } from './jsondoc';
 
 @Component({
   selector: 'app-content',
@@ -7,6 +8,201 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class ContentComponent {
   @Output() drawerEvent = new EventEmitter();
+
+  loginResponses1 = [
+    {
+      status: '200',
+      desc: '	Successful login',
+    },
+    {
+      status: '400',
+      desc: '	Please provide user name and password! ',
+    },
+    {
+      status: '401',
+      desc: '	Unauthorized',
+    },
+  ];
+
+  UpdateWALLETSResponses = [
+    {
+      status: '200',
+      desc: `Status: Success
+
+      Business Details:
+      ID: string
+      Name: string
+      Business Phone: string
+      Website: string
+      Address: string
+      Opening Hours: string
+      Identifier QR: string
+      Identifier: string
+      Gain Unit: string
+      
+      Visual Identity:
+      Label Color: Hexadecimal: string; RGB: string
+      Background Color: Hexadecimal: string; RGB: string
+      Foreground Color: Hexadecimal: string; RGB: string
+      
+      Media Links:
+      Facebook:string
+      Instagram:string
+      Linkedin:string
+      
+      Logo and Visuals:
+      Logo Picture URL: string
+      Icon Picture URL: string
+      Strip Picture URL: string`,
+    },
+    {
+      status: '404',
+      desc: 'Wallet not found',
+    },
+  ];
+  GetWALLETSResponses = [
+    {
+      status: '200',
+      desc: `Status: Success
+
+      Business Details:
+      ID: string
+      Name: string
+      Business Phone: string
+      Service Phone: string
+      Website: string
+      Address: string
+      Opening Hours: string
+      Identifier QR: string
+      Identifier: string
+      Gain Unit: string
+      
+      Visual Identity:
+      Label Color: Hexadecimal: string; RGB: string
+      Background Color: Hexadecimal: string; RGB: string
+      Foreground Color: Hexadecimal: string; RGB: string
+      
+      Media Links:
+      Facebook:string
+      Instagram:string
+      Linkedin:string
+      
+      Logo and Visuals:
+      Logo Picture URL: string
+      Icon Picture URL: string
+      Strip Picture URL: string`,
+    },
+    {
+      status: '404',
+      desc: 'Wallet not found',
+    },
+  ];
+  CreateCustomersResponses = [
+    {
+      status: '200',
+      desc: `Created 
+      id: (string) 
+      gain: (Number)
+      firstName: (string)
+      lastName: (string)email: (string) 
+      source: (string) 
+      barcode: (string) 
+      CreatedAt:(string) `,
+    },
+    {
+      status: '204',
+      desc: 'No Content ',
+    },
+    {
+      status: '403',
+      desc: 'Forbidden',
+    },
+    {
+      status: '404',
+      desc: 'Wallet not found',
+    },
+  ];
+  UpdateCustomersResponses = [
+    {
+      status: '200',
+      desc: `Customer successfully updated `,
+    },
+    {
+      status: '204',
+      desc: 'No Content ',
+    },
+    {
+      status: '403',
+      desc: 'Forbidden',
+    },
+    {
+      status: '404',
+      desc: 'Customer not found',
+    },
+  ];
+  GetCustomerResponses = [
+    {
+      status: '200',
+      desc: `_id: (string) 
+      gain: (Number) 
+      firstName: (string) 
+      lastName: (string) 
+      email: (string) 
+      source: (string)
+      barcode: (string) 
+      CreatedAt:(string) `,
+    },
+    {
+      status: '401',
+      desc: 'Unauthorized ',
+    },
+    {
+      status: '404',
+      desc: 'Customer not found',
+    },
+  ];
+  DeleteCustomerResponses = [
+    {
+      status: '200',
+      desc: `successfully deleted `,
+    },
+    {
+      status: '401',
+      desc: 'Unauthorized ',
+    },
+    {
+      status: '404',
+      desc: 'Customer not found',
+    },
+  ];
+  CreateOfferResponses2 = [
+    {
+      status: '200',
+      desc: 'successful created ',
+    },
+    {
+      status: '401',
+      desc: 'Unauthorized ',
+    },
+    {
+      status: '404',
+      desc: 'Wallet  not found!  ',
+    },
+  ];
+  GetOffersResponses2 = [
+    {
+      status: '200',
+      desc: 'Offers list',
+    },
+    {
+      status: '401',
+      desc: 'Unauthorized ',
+    },
+    {
+      status: '404',
+      desc: 'Wallet  not found!  ',
+    },
+  ];
 
   loginResponses = [
     {
@@ -166,6 +362,36 @@ export class ContentComponent {
       desc: '',
     },
   ];
+  CreateOfferResponses = [
+    {
+      name: 'startDate',
+      type: 'string',
+      required: true,
+      desc: 'Field with string iso formt ',
+    },
+    {
+      name: 'ENDdate',
+      type: 'string',
+      required: true,
+      desc: 'Field with string iso formt ',
+    },
+    {
+      name: 'description',
+      type: 'string',
+      required: true,
+      desc: '',
+    },
+    {
+      name: 'Strip',
+      type: 'file',
+      required: true,
+      desc: '',
+    },
+  ];
+
+  logData(): void {
+    getCouponServices();
+  }
 
   openCloseDrawer(): void {
     this.drawerEvent.emit('opened');

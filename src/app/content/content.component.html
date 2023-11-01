@@ -1,5 +1,5 @@
 <div class="right-col">
-  <h1>Introduction</h1>
+  <h1 id="Introduction">Introduction</h1>
 
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -10,7 +10,7 @@
     non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   </p>
 
-  <h2>Versions supportées:</h2>
+  <h2 id="Versions">Versions supportées:</h2>
 
   <p><b>Version d'application 1.0.0.</b> ELDOWALLET : V1.0.0</p>
 
@@ -21,7 +21,7 @@
     marketing mobile.
   </p>
 
-  <h2 id="technology">Technologie</h2>
+  <h2 id="Technologie">Technologie</h2>
 
   <p>
     <strong>React JS : </strong>
@@ -38,7 +38,7 @@
     and maintainable server-side applications.
   </p>
 
-  <p id="gettingstarted">
+  <p>
     <strong>MongoDB : </strong>
     We utilize MongoDB, a NoSQL database, for storing and managing our data.
     Mention the version and any specific configurations relevant to your
@@ -47,7 +47,7 @@
 
   <div class="divider" style="width: 24%; margin: 30px 0"></div>
 
-  <h1>Débutez</h1>
+  <h1 id="Débutez">Débutez</h1>
 
   <h2>Pourquoi ?</h2>
 
@@ -87,7 +87,7 @@
     <br />
   </ol>
 
-  <h2>Opening the app</h2>
+  <h2 id="Opening">Opening the app</h2>
 
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -111,12 +111,21 @@
   </p>
 
   <div class="divider" style="width: 24%; margin: 30px 0"></div>
+  <!-- 
+  
+  
+  
+Authenticiation Module
 
-  <h1 id="authentification">Authentification du module</h1>
 
-  <h3>Description:</h3>
 
-  <p id="description">
+ -->
+  <div id="authentification"></div>
+  <h1>Authenticiation Module</h1>
+
+  <h3 id="description">Description:</h3>
+
+  <p>
     Ce module permet aux utilisateurs de se connecter à un portefeuille et
     d'accéder à ses services.
   </p>
@@ -141,28 +150,19 @@
     <a class="code_btn" type="button" (click)="openCloseDrawer()">Code</a>
   </p>
   <h3>Response</h3>
-  <table>
-    <tr style="text-align: center">
-      <th>Status Code</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td>200</td>
-      <td>Successful login</td>
-    </tr>
-    <tr>
-      <td>400</td>
-      <td>Please provide user name and password!</td>
-    </tr>
-    <tr>
-      <td>401</td>
-      <td>Unauthorized</td>
-    </tr>
-  </table>
+  <app-response-tbl2 [responses2]="loginResponses1"></app-response-tbl2>
 
   <div class="divider" style="width: 24%; margin: 30px 0"></div>
+  <!-- 
+  
+  
+  
+  Manage Wallets Module
 
-  <h1>Manage Wallets Module</h1>
+
+
+ -->
+  <h1 id="ManageWallets ">Manage Wallets Module</h1>
 
   <h3>Description:</h3>
 
@@ -172,7 +172,7 @@
     possibilité de déposer des fonds, de consulter l'historique des transactions
     et d'accéder aux statistiques liées à diverses activités de portefeuille.
   </p>
-  <h2>Update WALLETS:</h2>
+  <h2 id="UpdateWallet">Update WALLETS:</h2>
   <h3>HTTP Request Header :</h3>
   <p>
     <b>Method:</b> PUT
@@ -202,72 +202,9 @@
   <h3>HTTP request body:</h3>
   <app-response [responses]="loginResponses"></app-response>
   <h3>Response</h3>
-  <table>
-    <tr style="text-align: center">
-      <th>Status Code</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td>200</td>
-      <td style="padding-left: 10px">
-        <b>Status: Success </b>
-        <br />
-        <br />
-        <b>Business Details: </b>
-        <br />
-        ID: string
-        <br />
-        Name: string
-        <br />
-        Business Phone: string
-        <br />
-        Website: string
-        <br />
-        Address: string
-        <br />
-        Opening Hours: string
-        <br />
-        Identifier QR: string
-        <br />
-        Identifier: string
-        <br />
-        Gain Unit: string
-        <br />
-        <br />
-        <b>Visual Identity:</b>
-        <br />
-        Label Color: Hexadecimal: string; RGB: string
-        <br />
-        Background Color: Hexadecimal: string; RGB: string
-        <br />
-        Foreground Color: Hexadecimal: string; RGB: string
-        <br />
-        <br />
-        <b> Media Links: </b>
-        <br />
-        Facebook:string
-        <br />
-        Instagram:string
-        <br />
-        Linkedin:string
-        <br />
-        <br />
-        <b>Logo and Visuals: </b>
-        <br />
-        Logo Picture URL: string
-        <br />
-        Icon Picture URL: string
-        <br />
-        Strip Picture URL: string
-      </td>
-    </tr>
-    <tr>
-      <td>404</td>
-      <td style="padding-left: 10px">Wallet not found</td>
-    </tr>
-  </table>
+  <app-response-tbl2 [responses2]="UpdateWALLETSResponses"></app-response-tbl2>
 
-  <h1>Get WALLETS Informations:</h1>
+  <h2 id="GetWALLETS">Get WALLETS Informations:</h2>
   <h3>HTTP Request Header:</h3>
   <p>
     <b>Method:</b> GET
@@ -289,80 +226,96 @@
     <a class="code_btn" type="button" (click)="openCloseDrawer()">Code</a>
   </p>
   <h3>Response</h3>
-  <table>
-    <tr style="text-align: center">
-      <th>Status Code</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td>200</td>
-      <td style="padding-left: 10px">
-        <b>Status: Success </b>
-        <br />
-        <br />
-        <b>Business Details: </b>
-        <br />
-        ID: string
-        <br />
-        Name: string
-        <br />
-        Business Phone: string
-        <br />
-        Service Phone: string
-        <br />
-        Website: string
-        <br />
-        Address: string
-        <br />
-        Opening Hours: string
-        <br />
-        Identifier QR: string
-        <br />
-        Identifier: string
-        <br />
-        Gain Unit: string
-        <br />
-        <br />
-        <b>Visual Identity:</b>
-        <br />
-        Label Color: Hexadecimal: string; RGB: string
-        <br />
-        Background Color: Hexadecimal: string; RGB: string
-        <br />
-        Foreground Color: Hexadecimal: string; RGB: string
-        <br />
-        <br />
-        <b> Media Links: </b>
-        <br />
-        Facebook:string
-        <br />
-        Instagram:string
-        <br />
-        Linkedin:string
-        <br />
-        <br />
-        <b>Logo and Visuals: </b>
-        <br />
-        Logo Picture URL: string
-        <br />
-        Icon Picture URL: string
-        <br />
-        Strip Picture URL: string
-      </td>
-    </tr>
-    <tr>
-      <td>404</td>
-      <td style="padding-left: 10px">Wallet not found</td>
-    </tr>
-  </table>
+  <app-response-tbl2 [responses2]="GetWALLETSResponses"></app-response-tbl2>
 
-  <h1>Get WALLETS Informations</h1>
+  <div class="divider" style="width: 24%; margin: 30px 0"></div>
+  <!-- 
+  
+  
+  
+  Manage Customers Module
+
+
+
+ -->
+  <h1 id="ManageCustomers">Manage Customers Module</h1>
+
+  <h3>Description</h3>
+
+  <p>
+    Le module « Gérer les clients » permet aux gestionnaires de gérer
+    efficacement les données clients provenant de diverses sources.
+  </p>
+  <h2 id="CreateCustomers">Create Customers</h2>
+  <h3>HTTP Request Header:</h3>
+  <p>
+    <b>Method:</b> POST
+    <br />
+    <br />
+    <b>URL</b> {{ " https://wallets.fr/api/customers " }}
+    <br />
+    <br />
+    <b> Host</b> https://wallets.fr
+    <br />
+    <br id="" />
+    <b>x-api-key</b> {{ "{x-api-key}" }}
+    <br />
+    <br />
+    <b>Accept</b> {{ "application/json " }}
+    <br />
+    <br />
+    <b>Content-Type:</b> {{ "application/json" }}
+    <br />
+    <br />
+    <b>Authorization</b> {{ '"abc {****************************}"' }} (Please
+    replace asterisks with the actual authorization token)
+  </p>
+  <h3>HTTP Request Body:</h3>
+  <a class="code_btn" type="button" (click)="openCloseDrawer()">Code</a>
+  <h3>Response</h3>
+  <app-response-tbl2
+    [responses2]="CreateCustomersResponses"
+  ></app-response-tbl2>
+
+  <h2 id="UpdateCustomer">Update Customer</h2>
+  <h3>HTTP Request Header:</h3>
+  <p>
+    <b>Method:</b> PUT
+    <br />
+    <br />
+    <b>URL</b> {{ " https://wallets.fr/api/customers/{customer_id} " }}
+    <br />
+    <br />
+    <b> Host</b> https://wallets.fr
+    <br />
+    <br id="" />
+    <b>x-api-key</b> {{ "{x-api-key}" }}
+    <br />
+    <br />
+    <b>Accept</b> {{ "application/json " }}
+    <br />
+    <br />
+    <b>Content-Type:</b> {{ "application/json" }}
+    <br />
+    <br />
+    <b>Authorization</b> {{ '"abc {****************************}"' }} (Please
+    replace asterisks with the actual authorization token)
+  </p>
+  <h3>HTTP Request Body:</h3>
+  <a class="code_btn" type="button" (click)="openCloseDrawer()">Code</a>
+  <h3>Response</h3>
+  <app-response-tbl2
+    [responses2]="UpdateCustomersResponses"
+  ></app-response-tbl2>
+
+  <h2 id="GetCustomer">Get Customer informations</h2>
   <h3>HTTP Request Header:</h3>
   <p>
     <b>Method:</b> GET
     <br />
     <br />
-    <b>URL</b> {{ "/api/wallets/{id}" }}
+    <b>URL</b>
+    {{ " https://wallets.fr/api/customers/{customer_id}/informations" }}
     <br />
     <br />
     <b> Host</b> https://wallets.fr
@@ -373,221 +326,107 @@
     <br />
     <b>Authorization</b> {{ '"abc {****************************}"' }} (Please
     replace asterisks with the actual authorization token)
-    <br />
-    <br />
-    <a class="code_btn" type="button" (click)="openCloseDrawer()">Code</a>
   </p>
   <h3>Response</h3>
-  <table>
-    <tr style="text-align: center">
-      <th>Status Code</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td>200</td>
-      <td style="padding-left: 10px">
-        <b>Status: Success </b>
-        <br />
-        <br />
-        <b>Business Details: </b>
-        <br />
-        ID: string
-        <br />
-        Name: string
-        <br />
-        Business Phone: string
-        <br />
-        Service Phone: string
-        <br />
-        Website: string
-        <br />
-        Address: string
-        <br />
-        Opening Hours: string
-        <br />
-        Identifier QR: string
-        <br />
-        Identifier: string
-        <br />
-        Gain Unit: string
-        <br />
-        <br />
-        <b>Visual Identity:</b>
-        <br />
-        Label Color: Hexadecimal: string; RGB: string
-        <br />
-        Background Color: Hexadecimal: string; RGB: string
-        <br />
-        Foreground Color: Hexadecimal: string; RGB: string
-        <br />
-        <br />
-        <b> Media Links: </b>
-        <br />
-        Facebook:string
-        <br />
-        Instagram:string
-        <br />
-        Linkedin:string
-        <br />
-        <br />
-        <b>Logo and Visuals: </b>
-        <br />
-        Logo Picture URL: string
-        <br />
-        Icon Picture URL: string
-        <br />
-        Strip Picture URL: string
-      </td>
-    </tr>
-    <tr>
-      <td>404</td>
-      <td style="padding-left: 10px">Wallet not found</td>
-    </tr>
-  </table>
+  <app-response-tbl2 [responses2]="GetCustomerResponses"></app-response-tbl2>
+
+  <h2>Delete Customer</h2>
+  <h3>HTTP Request Header:</h3>
+  <p>
+    <b>Method:</b> DELETE
+    <br />
+    <br />
+    <b>URL</b> {{ " https://wallets.fr/api/customers/{customer_id}" }}
+    <br />
+    <br />
+    <b> Host</b> https://wallets.fr
+    <br />
+    <br id="" />
+    <b>x-api-key</b> {{ "{x-api-key}" }}
+    <br />
+    <br />
+    <b>Accept</b> {{ "application/json " }}
+    <br />
+    <br />
+    <b>Content-Type:</b> {{ "multipart/form-datadat" }}
+    <br />
+    <br />
+    <b>Authorization</b> {{ '"abc {****************************}"' }} (Please
+    replace asterisks with the actual authorization token)
+  </p>
+  <h3>Response</h3>
+  <app-response-tbl2 [responses2]="DeleteCustomerResponses"></app-response-tbl2>
+
+  <div class="doublespace"></div>
+  <div class="divider" style="width: 24%; margin: 30px 0"></div>
+
+  <h1 id="ManageOffersModule">Manage Offers Module</h1>
+  <h2>Description</h2>
+  <p>
+    The "Manage Offers Module" empowers managers with the capability to create,
+    update, and oversee a wide array of promotional offers and deals within the
+    Eldowallet app. This module enables businesses to effortlessly design,
+    schedule, and track the performance of special promotions, thereby enhancing
+    the overall customer experience and bolstering user engagement with the
+    platform.
+  </p>
+  <h2 id="CreateOffer">Create Offer</h2>
+  <h3>HTTP Request Header:</h3>
+  <p>
+    <b>Method:</b> POST
+    <br />
+    <br />
+    <b>URL</b> {{ "/api/wallets/{id}/offers " }}
+    <br />
+    <br />
+    <b> Host</b> https://wallets.fr
+    <br />
+    <br id="" />
+    <b>x-api-key</b> {{ "{x-api-key}" }}
+    <br />
+    <br />
+    <b>Authorization</b> {{ '"abc {****************************}"' }} (Please
+    replace asterisks with the actual authorization token)
+  </p>
+  <h3>HTTP Request body:</h3>
+  <app-response [responses]="CreateOfferResponses"></app-response>
+  <h3>Response</h3>
+  <app-response-tbl2 [responses2]="CreateOfferResponses2"></app-response-tbl2>
+  <h2 id="GetOffers">Get Offers</h2>
+  <h3>HTTP Request Header:</h3>
+  <p>
+    <b>Method:</b> GET
+    <br />
+    <br />
+    <b>URL</b> {{ "/api/wallets/{id}/offers/{id}" }}
+    <br />
+    <br />
+    <b> Host</b> https://wallets.fr
+    <br />
+    <br id="" />
+    <b>x-api-key</b> {{ "{x-api-key}" }}
+    <br />
+    <br />
+    <b>Authorization</b> {{ '"abc {****************************}"' }} (Please
+    replace asterisks with the actual authorization token)
+  </p>
+  <h3>Response</h3>
+  <app-response-tbl2 [responses2]="GetOffersResponses2"></app-response-tbl2>
+
+  <div class="doublespace"></div>
+  <div class="divider" style="width: 24%; margin: 30px 0"></div>
 
   <!-- 
-
-
-
-
-
   
+  
+  
+  Manage Customers Module
+
+
+
  -->
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur.
-    <br id="advanced" />
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
-  </p>
 
-  <div class="divider" style="width: 24%; margin: 30px 0"></div>
-
-  <h1>Advanced Features</h1>
-
-  <h2>Feature A</h2>
-
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur.
-    <br />
-    <br id="featureb" />
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
-  </p>
-
-  <h2>Feature B</h2>
-
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
-    <br />
-    <br id="featurec" />
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit
-    amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-    labore et dolore magna aliqua.
-  </p>
-
-  <h2>Feature C</h2>
-
-  <p id="featurec1">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
-  </p>
-
-  <h2>Feature C.1</h2>
-
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit:</p>
-
-  <ul>
-    <li>
-      <b>Point 1</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br />
-    </li>
-
-    <li>
-      <b>Point 2</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-      sed do eiusmod tempor.
-    </li>
-    <br id="featurec2" />
-    <li>
-      <b>Point 3</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      <br />
-    </li>
-  </ul>
-
-  <h2>Feauture C.2</h2>
-
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
-    <br />
-    <br />
-    <b>Important:</b> Please notice that lorem ipsum dolor sit amet, consectetur
-    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua.
-    <br />
-    <br />
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  </p>
-
-  <h2>Feature D</h2>
-
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
-  </p>
-
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit
-    amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-    labore et dolore magna aliqua.
-    <br />
-    <br id="accesibility" />
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  </p>
-
-  <div class="divider" style="width: 24%; margin: 30px 0"></div>
-
-  <h1>Accessibility</h1>
-
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit
-    amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-    labore et dolore magna aliqua.
-    <br />
-    <br />
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
-    <br />
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  </p>
-
-  <p>
-    Lorem ipsum dolor sit amet. <br id="moreinfo" />Lorem ipsum dolor sit amet,
-    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-    dolore magna aliqua.
-  </p>
-
-  <div class="divider" style="width: 24%; margin: 30px 0"></div>
-
-  <h1>More Info</h1>
-
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.marks are protected by
-    intellectual property rights.
-  </p>
-
+  <button (click)="logData()"></button>
   <div class="doublespace"></div>
   <div class="divider" style="width: 24%; margin: 30px 0"></div>
 </div>

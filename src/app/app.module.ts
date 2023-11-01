@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { DrawerComponent } from './drawer/drawer.component';
 import { InViewportModule } from 'ng-in-viewport';
 import { RESPONSEComponent } from './response/response.component';
+import { ResponseTbl2Component } from './response-tbl2/response-tbl2.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { RESPONSEComponent } from './response/response.component';
     NavbarComponent,
     DrawerComponent,
     RESPONSEComponent,
+    ResponseTbl2Component,
     
   ],
   imports: [

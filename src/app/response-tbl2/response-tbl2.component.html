@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <table id="customers">
+    <tr>
+      <th>Status Code</th>
+      <th>Description</th>
+    </tr>
+
+    <tr *ngFor="let resp of responses2">
+      <td>{{ resp.status }}</td>
+      <td style="white-space: pre-line">{{ resp.desc }}</td>
+    </tr>
+  </table>
+</div>
