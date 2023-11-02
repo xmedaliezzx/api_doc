@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Output, inject } from '@angular/core';
-import { getCouponServices } from './jsondoc';
 import { GeneralService } from '../general.service';
 
 @Component({
@@ -9,8 +8,7 @@ import { GeneralService } from '../general.service';
 })
 export class ContentComponent {
   @Output() drawerEvent = new EventEmitter();
-  _general = inject(GeneralService)
-
+  _general = inject(GeneralService);
 
   loginResponses1 = [
     {
@@ -393,7 +391,7 @@ export class ContentComponent {
   ];
 
   logData(): void {
-    getCouponServices();
+    this._general.mapSwaggerDocToServices();
   }
 
   openCloseDrawer(): void {
