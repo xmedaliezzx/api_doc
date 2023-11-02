@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, inject } from '@angular/core';
 import { getCouponServices } from './jsondoc';
+import { GeneralService } from '../general.service';
 
 @Component({
   selector: 'app-content',
@@ -8,6 +9,8 @@ import { getCouponServices } from './jsondoc';
 })
 export class ContentComponent {
   @Output() drawerEvent = new EventEmitter();
+  _general = inject(GeneralService)
+
 
   loginResponses1 = [
     {
